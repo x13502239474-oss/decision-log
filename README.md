@@ -181,6 +181,7 @@ decision-log/
 | 构建产物完整性 | `index.html`、`manifest.webmanifest`、`sw.js`、`favicon.svg`、3 个 PNG 图标、JS/CSS 均在 `dist` 内；`%BASE_URL%` 正确替换为 `/decision-log/` |
 | 端到端测试（本地构建产物） | **90 项全部通过，0 项失败；控制台错误 0 条** |
 | 端到端测试（线上 Pages 地址） | **90 项全部通过，0 项失败；控制台错误 0 条**；首页、JS/CSS、manifest、sw.js、图标均返回 HTTP 200 且 MIME 正确 |
+| GitHub Actions 自动部署 | 已启用：`npm ci` → `npm run build` → Pages 部署全部成功（run `42468228003`，conclusion `success`）；推送 `main` 或手动运行工作流即自动更新 |
 | 创建与持久化 | 三步表单、多方案、信心 5 分、自定义回访日期、封存仪式、刷新后数据仍在，全部通过 |
 | 核心回访机制 | 盲写页不出现理由 / 情境 / 方案 / 信心；空结果被拦截；结果在拆封动画前已落盘；动画期间不显示理由；拆封后才展示原始判断，全部通过 |
 | 归档与查看 | 状态 `reviewed`、结果对比、经验教训、回访日期、原始理由未被修改、双面档案卡翻转，全部通过 |
