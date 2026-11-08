@@ -51,6 +51,8 @@ ok('封存动画结束后首页出现到期信封', T().includes('自动化测�
 return checks
 
 /* PHASE_2 */
+// 线上站点经代理加载可能比本地慢，先等 React 真正挂载完成再断言 DOM
+await waitFor(() => T().includes('自动化测试决策'), 20000)
 ok('刷新后数据仍然存在', store().decisions?.length === 1)
 ok('刷新后首页仍显示该决策', T().includes('自动化测试决策'))
 ok('首页显示已到期分组', T().includes('已到期'))
